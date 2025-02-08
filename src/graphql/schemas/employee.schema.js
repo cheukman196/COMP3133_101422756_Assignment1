@@ -4,7 +4,7 @@ const { gql } = require('@apollo/server')
 // custom scalars see below
 // https://stackoverflow.com/questions/49693928/date-and-json-in-type-definition-for-graphql
 
-const employeeSchema = gql`
+const employeeTypeDefs = gql`
     type Employee {
         id: ID!
         first_name: String!
@@ -28,7 +28,7 @@ const employeeSchema = gql`
     }
 
     type Query {
-        getAllEmployees(): [Employee]!
+        getAllEmployees: [Employee]!
         searchEmployeeById(id: ID!): Employee
         searchEmployeeByDesignationOrDepartment(
             designation: String,
@@ -67,4 +67,4 @@ const employeeSchema = gql`
     }
 `
 
-module.exports = employeeSchema;
+module.exports = employeeTypeDefs;
