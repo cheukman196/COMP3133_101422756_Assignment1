@@ -125,17 +125,18 @@ type LoginResponse {
 ### Queries
  
 - `login`: Logs in a user with their username and password.
-  ``` graphql
-  login(username: String!, password: String!): LoginResponse!
-  ```
+
+``` graphql
+login(username: String!, password: String!): LoginResponse!
+```
 ### Mutations
 
 - `signup`: Signs up a new user with their username, email, and password. 
 
-  ``` graphql
+``` graphql
   signup(
     username: String!,
     email: String!,
     password: String!
   ): User!
-  ```
+```
