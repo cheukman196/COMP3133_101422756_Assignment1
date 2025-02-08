@@ -1,6 +1,6 @@
-const { gql } = require('@apollo/server')
+const { gql } = require('graphql-tag')
 
-const userTypeDefs = gql`
+const userTypeDef = gql`
     type User {
         id: ID!
         username: String!
@@ -16,11 +16,13 @@ const userTypeDefs = gql`
     }
 
     type Query {
+        # USER
         "login with username and password"
         login(username: String!, password: String!):LoginResponse!
     }
 
     type Mutation {
+        # USER
         "signup with username, email and password"
         signup(
             username: String!, 
@@ -29,4 +31,5 @@ const userTypeDefs = gql`
         ):User!
     }
 `
-module.exports = userTypeDefs;
+
+module.exports = userTypeDef;
