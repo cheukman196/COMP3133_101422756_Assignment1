@@ -35,31 +35,31 @@ enum Gender {
 ### Queries
 - `getAllEmployees`: Retrieves a list of all employees.
 
-  ``` graphql
+``` graphql
   getAllEmployees: [Employee]!
-  ```
+```
 
 - `searchEmployeeById`: Searches for an employee by their ID.
 
-  ``` graphql
+``` graphql
   searchEmployeeById(id: ID!): Employee
-  ```
+```
 
 - `searchEmployeeByDesignationOrDepartment`: Searches for employees by their designation or department.
 
-  ``` graphql
+``` graphql
   searchEmployeeByDesignationOrDepartment(
     designation: String,
     department: String
   ): [Employee]!
-  ```
+```
   
 
 ### Mutations
 
 - `createEmployee`: Creates a new employee with the required fields.
 
-  ``` graphql
+``` graphql
   createEmployee(
     first_name: String!,
     last_name: String!,
@@ -71,11 +71,11 @@ enum Gender {
     department: String!,
     employee_photo: String
   ): Employee!
-  ```
+```
 
 - `updateEmployee`: Updates an existing employee by their ID and optional fields.  
 
-  ``` graphql
+``` graphql
   updateEmployee(
     id: ID!,
     first_name: String,
@@ -88,7 +88,7 @@ enum Gender {
     department: String,
     employee_photo: String
   ): Employee!
-  ```
+```
   
 - `deleteEmployee`: Deletes an employee by their ID.
 
